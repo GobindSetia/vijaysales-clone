@@ -14,6 +14,7 @@
     border:none;
     border-bottom: 1px solid black;
     font-size: 15px;
+    margin-bottom: 40px;
 }
 button{
     margin-top: 40px;
@@ -62,6 +63,7 @@ div>p{
 #pass{
     width:350px;
     border:none;
+    
     border-bottom: 1px solid black;
     font-size: 15px;
 
@@ -72,7 +74,7 @@ div>p{
     border:none;
     border-bottom: 1px solid black;
     font-size: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 
 }
 
@@ -86,9 +88,14 @@ div>p{
 
 }
 #send{
+    margin-bottom: 40px;
+    width:380px;
     display: flex;
+    justify-content: space-between;
 }
 #resend{
+  
+    margin-top: 0px;
     background-color: white;
     color:red;
     border: none;

@@ -1,7 +1,7 @@
 function footer(){
     return `<div id="Footer">
     <div>
-    <h4>USEFUL LINKS</h4>
+    <h4> <span id="l1">USEFUL LINKS</span></h4>
     <p>HOME</p>
     <p>ABOUT US</p>
     <p>STORE LOCATOR</p>
@@ -14,7 +14,7 @@ function footer(){
     <p>GIFTVOUCHERS</p>
     </div>
     <div>
-        <h4>CATEGORIES</h4>
+        <h4><span id="l2">CATEGORIES</span></h4>
         <p>LAPTOP & PRINTER</p>
         <p>MOBILES & TABLETS</p>
         <p>WASHING MACHINE</p>
@@ -27,12 +27,12 @@ function footer(){
         
     </div>
     <div>
-       <h4> MY ACCOUNT</h4>  
+       <h4><span id="l3"> MY ACCOUNT</span></h4>  
        <p>MY ACCOUNT</p> 
        <p>MY ORDERS</p> 
     </div>
     <div>
-       <h4>HELP DESK</h4> 
+       <h4><span id="l4">HELP DESK</span></h4> 
        <p>TERMS OF USE</p>  
        <p>PRIVACY POLICY</p> 
        <p>PAYMENT & RETURNS</p>
@@ -41,11 +41,18 @@ function footer(){
        <p>LOYALTY PROGRAMME</p>
     </div>
     <div>
-       <h4>NEWSLETTER</h4> 
+       <h4><span id="l5">NEWSLETTER</span></h4> 
         <p>Stay in touch with us, get product updates, offers, discounts directly to your inbox</p>
-        <input type="text" id="bar" placeholder="Please Provide your Email id here">
+        <div id="dis">
+        <div>
+        <input type="text" id="bar" placeholder="Please Provide your Email id here" > 
+        </div>
+        <div>
+        <img src="https://d2xamzlzrdbdbn.cloudfront.net/imgwebsite/send-button.png"  id="tag">
+        </div>
+        </div>
         <p>We'll never share your email address with a third party.</p>
-        <h4>FOLLOW US ON</h4>
+        <h4><span id="l6">FOLLOW US ON</span></h4>
         <div id="k">
             <img src="https://d2xamzlzrdbdbn.cloudfront.net/imgwebsite/follow-us-on-facebook.png" >
             <img src="https://d2xamzlzrdbdbn.cloudfront.net/imgwebsite/follow-us-on-twitter.png" >

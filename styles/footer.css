@@ -6,7 +6,8 @@
     margin-top: 100px;
     color: white;
     background-color: black;
-    padding:20px;
+    /* padding:20px; */
+    padding-top: 20px;
 }
 .one{
    display: inline;
@@ -15,7 +16,7 @@
 }
 h4{
    border-width:10%;
-    border-bottom: 1px solid red;
+    /* border-bottom: 1px solid red; */
     margin-bottom: 15px;
 }
 #header{
@@ -63,7 +64,32 @@ h4{
 #l{
     font-size: 12px;
     color:whitesmoke;
+    
    
+}
+#l1{
+  
+    border-bottom: 2px solid red;   
+}
+#l2{
+  
+    border-bottom: 2px solid red;   
+}
+#l3{
+  
+    border-bottom: 2px solid red;   
+}
+#l4{
+  
+    border-bottom: 2px solid red;   
+}
+#l5{
+  
+    border-bottom: 2px solid red;   
+}
+#l6{
+  
+    border-bottom: 2px solid red;   
 }
 
 h1{
@@ -79,10 +105,11 @@ h1{
     font-size: 14px;
     
     text-align: left;
-    margin-left: 80px;
+    margin-left: 60px;
     padding:20px;
     font-display:unset;
     line-height: 30px;
+    margin-right: 50px;
    
     
 }
@@ -99,13 +126,13 @@ a{
 .st1{
    
     height: 50px;
-    font-size: 14px;
-    
+    font-size: 14px; 
     text-align: left;
-    margin-left: 80px;
+    margin-left: 60px;
     padding:20px;
     font-display:unset;
     line-height: 30px;
+    margin-right: 50px;
    
     
 }
@@ -114,10 +141,11 @@ a{
     height: 50px;
     font-size: 14px;
     text-align: left;
-    margin-left: 80px;
+    margin-left: 60px;
     padding:20px;
     font-display:unset;
     line-height: 30px;
+    margin-right: 50px;
    
     
 }
@@ -126,10 +154,11 @@ a{
     height: 50px;
     font-size: 14px;
     text-align: left;
-    margin-left: 80px;
+    margin-left: 60px;
     padding:20px;
     font-display:unset;
     line-height: 30px;
+    margin-right: 50px;
    
     
 }
@@ -138,22 +167,26 @@ a{
     border-bottom: 2px solid white;
     margin: auto;
     margin-top: 50px;
+    margin-right: 75px;
 }
 #st5{
     width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
+    margin-right: 75px;
+    margin-top: 20px;
 }
 .st6{
    
     height: 50px;
     font-size: 14px;
     text-align: left;
-    margin-left: 80px;
+    margin-left: 60px;
     padding:20px;
     font-display:unset;
     line-height: 30px;
+    margin-right: 50px;
    
     
 }
@@ -162,11 +195,26 @@ a{
     height: 50px;
     font-size: 14px;
     text-align: left;
-    margin-left: 80px;
+    margin-left: 60px;
     padding:20px;
     font-display:unset;
     line-height: 30px;
+    margin-right: 50px;
    
     
 }
+#bar{
+    width:350px;
+    height: 30px;
+    background-color: #808080;
+    color:white;
+}
+#tag{
+    width:34px;
+    height:34px;
+}
+#dis{
+    display: flex;
+}
+
 

@@ -55,11 +55,7 @@ setTimeout(()=>{
 
 setTimeout(()=>{
     let otp=document.getElementById("otp").value
-    setTimeout(()=>{
-    if(otp!=z){
-        alert("Incorreect otp")
-    }
-}, 5000)
+   
 
 }, 5000)
 
