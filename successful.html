@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h2 id="message"></h2>
+    </div>
+</body>
+</html>
+<script>
+    var message = document.getElementById("message");
+    var name = JSON.parse(localStorage.getItem("cardName"));
+    
+    orderSuccessful();
+    
+    function orderSuccessful(){
+    setTimeout(orderPlaced,2000);
+    setTimeout(paymentSuccessfull,4000);
+    setTimeout(orderPacked,6000);
+    setTimeout(orderDispatched,8000);
+    setTimeout(delivered,10000);
+}
+
+function paymentSuccessfull(){
+    message.innerText="Your payment is successful.";
+}
+
+function orderPlaced(){
+    message.innerText="Your order has been placed.";
+}
+
+
+function orderPacked(){
+    message.innerText="Your order has been packed.";
+}
+
+function orderDispatched(){
+    message.innerText="Your order has been dispatched.";
+}
+
+function delivered(){
+    message.innerText="Your order has been delivered.\nThank you for shopping with us.";
+}
+</script>
