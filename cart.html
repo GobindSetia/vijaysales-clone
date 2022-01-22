@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart | Vijay Sales</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://d2xamzlzrdbdbn.cloudfront.net/images/fevicon.ico"
+    />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+          background-color: rgb(245,247,247);
+      }
+      #container {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        gap: 20px;
+      }
+      #container>div>div{
+          background-color: white;
+      }
+      #productsMain {
+        flex: 5;
+      }
+      #productsMain>div {
+        padding: 20px;
+      }
+      #pinCheck {
+        border: 1px solid grey;
+        display: flex;
+        justify-content: space-between;
+      }
+      #pinCheck h2 {
+        display: inline;
+      }
+      #products {
+        border: 1px solid grey;
+      }
+      #buyDiv {
+        border: 1px solid grey;
+        text-align: right;
+        padding: 20px;
+        padding-top: 50px;
+      }
+      #buyDiv > button {
+        background-color: #ff2626;
+        padding: 15px 20px;
+        font-size: 20px;
+        color: white;
+        font-weight: 700;
+        border: none;
+      }
+      #rightSection {
+        flex: 2;
+      }
+      #coupons {
+        border: 1px solid grey;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      #priceDetails {
+        border: 1px solid grey;
+      }
+      #products > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      #products > div > div {
+        display: flex;
+      }
+      #numOfProduct {
+        display: flex;
+      }
+      #numOfProduct > button {
+        height: 30px;
+        width: 30px;
+        border-radius: 50px;
+        font-size: 20px;
+        border: 2px solid grey;
+        background-color: white;
+      }
+      #numOfProduct > input {
+        height: 30px;
+        width: 30px;
+        font-size: 20px;
+        border: 1px solid grey;
+        background-color: white;
+        margin: 0px 10px;
+      }
+      #productImage {
+        height: 100px;
+        border: 1px solid blue;
+      }
+      #priceDetails > div > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      #priceDetails > div{
+        border-bottom: 1px solid grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="productsMain">
+        <div id="pinCheck">
+          <div id="orderSummary">
+            <span><h2>Order Summary</h2></span>
+            <span><h2 id="totalItems">(1 Item)</h2></span>
+          </div>
+          <div id="pincode">
+            <div>
+                <p>Deliver to:</p>
+                <p>Gobind Setia</p>
+                <p>D199, West Patel Nagar, Delhi (110008)</p>
+            </div>
+          </div>
+        </div>
+        <div id="products">
+          <div>
+            <div id="productInfo">
+              <div id="produtLeft">
+                <div id="productImage"></div>
+                <div id="removeProduct">
+                  <button>Remove</button>
+                </div>
+              </div>
+              <div id="productRight">
+                <div id="productName">
+                  <h3>Apple IPhone 12 (128 GB - Black)</h3>
+                </div>
+                <div id="productPrice">
+                  <p>₹ <span>65900</span> </p>
+                </div>
+              </div>
+            </div>
+
+            <div id="productsRight">
+              <div id="numOfProduct">
+                <button id="remBtn">-</button>
+                <input type="number" value="1" id="numOfProd"/>
+                <button id="addBtn">+</button>
+              </div>
+              <div id="deliveryInfo">
+                <p>FREE DELIVERY</p>
+                <p>Delivery in 1-3 Days</p>
+                <p>( T&C apply)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="buyDiv">
+          <button id="proceedToBuy">Proceed to Buy</button>
+        </div>
+      </div>
+
+      <div id="rightSection">
+        <div id="coupons">
+          <h4>AVAILABLE BANK OFFERS & COUPONS</h4>
+          <input type="text" />
+          <button>Apply Now</button>
+        </div>
+        <div id="priceDetails">
+          <div><h4>PRICE DETIALS</h4></div>
+          <div>
+            <div>
+              <p>Price</p>
+              <p>₹  <span id="totalPrice">65900</span></p>
+            </div>
+            <div>
+              <p>Delivery Charge</p>
+              <p>FREE</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h5>Total Amount</h5>
+              <h5 >₹  <span id="totalAmount">65900</span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  document.getElementById("proceedToBuy").addEventListener('click',proceedToBuy);
+  function proceedToBuy(){
+    var totalAmount = document.getElementById("totalAmount").innerText;
+    localStorage.setItem("totalAmount",JSON.stringify(totalAmount));
+    window.location.href = "payments.html"
+  }
+
+  var count =  localStorage.getItem("Counter")||1;
+ document.querySelector("#numOfProd").value = count;
+
+ document.getElementById('addBtn').addEventListener("click",incFunc);
+
+ function incFunc(){
+   if(count==5){
+     return alert("You can't buy more than 5 products at a time.")
+   }
+     count++;
+     document.querySelector("#numOfProd").value = count;
+     localStorage.setItem("Counter", count);
+      }
+
+ document.getElementById('remBtn').addEventListener("click",decFunc);
+
+ function decFunc(){
+  if(count<=1){
+     var remCon =  confirm("Do you want to remove this product from your cart?");
+     if(remCon==true){
+       document.getElementById("products").innerHTML="";
+     }
+   }
+   
+     count--;
+     document.querySelector("#numOfProd").value = count;
+     localStorage.setItem("Counter", count);
+      }
+</script>
