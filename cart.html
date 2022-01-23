@@ -24,6 +24,8 @@
       }
       #container>div>div{
           background-color: white;
+          border-radius: 10px;
+          margin-bottom: 20px;
       }
       #productsMain {
         flex: 5;
@@ -95,7 +97,6 @@
       }
       #productImage {
         height: 100px;
-        border: 1px solid blue;
       }
       #priceDetails > div > div {
         display: flex;
@@ -126,7 +127,9 @@
           <div>
             <div id="productInfo">
               <div id="produtLeft">
-                <div id="productImage"></div>
+                <div id="productImage">
+                  <img src="https://d2xamzlzrdbdbn.cloudfront.net/products/247fbe63-1134-4fd6-ba39-a32f4577fafa_416x416.jpg" alt="" width="100px">
+                </div>
                 <div id="removeProduct">
                   <button>Remove</button>
                 </div>
@@ -136,7 +139,7 @@
                   <h3>Apple IPhone 12 (128 GB - Black)</h3>
                 </div>
                 <div id="productPrice">
-                  <p>₹ <span>65900</span> </p>
+                  <p>₹ <span id="singleProduct">62605</span> </p>
                 </div>
               </div>
             </div>
@@ -163,8 +166,10 @@
       <div id="rightSection">
         <div id="coupons">
           <h4>AVAILABLE BANK OFFERS & COUPONS</h4>
-          <input type="text" />
-          <button>Apply Now</button>
+          <p> <i>Use 'masai10' to get 10% off</i> </p>
+          <input type="text" id="couponText" />
+          <button id="couponBtn">Apply Now</button>
+          <p id="couponConfirm"></p>
         </div>
         <div id="priceDetails">
           <div><h4>PRICE DETIALS</h4></div>
@@ -196,8 +201,12 @@
     localStorage.setItem("totalAmount",JSON.stringify(totalAmount));
     window.location.href = "payments.html"
   }
-
+var singlePrice = document.getElementById('singleProduct').innerText;
+console.log(singlePrice);
   var count =  localStorage.getItem("Counter")||1;
+  document.getElementById("totalPrice").innerText=count*singlePrice;
+     document.getElementById("totalAmount").innerText=count*singlePrice;
+     localStorage.setItem("finalPrice",JSON.stringify(document.getElementById("totalAmount").innerText));
  document.querySelector("#numOfProd").value = count;
 
  document.getElementById('addBtn').addEventListener("click",incFunc);
@@ -209,6 +218,10 @@
      count++;
      document.querySelector("#numOfProd").value = count;
      localStorage.setItem("Counter", count);
+     document.getElementById("totalPrice").innerText=count*singlePrice;
+     document.getElementById("totalAmount").innerText=count*singlePrice;
+     localStorage.setItem("finalPrice",JSON.stringify(document.getElementById("totalAmount").innerText));
+     
       }
 
  document.getElementById('remBtn').addEventListener("click",decFunc);
@@ -224,5 +237,22 @@
      count--;
      document.querySelector("#numOfProd").value = count;
      localStorage.setItem("Counter", count);
+     document.getElementById("totalPrice").innerText=count*singlePrice;
+     document.getElementById("totalAmount").innerText=count*singlePrice;
+     localStorage.setItem("finalPrice",JSON.stringify(document.getElementById("totalAmount").innerText));
+      }
+
+
+      document.getElementById('couponBtn').addEventListener("click",addcoupon);
+
+      function addcoupon(){
+        if(document.getElementById("couponText").value == "masai10"){
+          document.getElementById("totalAmount").innerText = document.getElementById("totalAmount").innerText*9/10;
+          localStorage.setItem("finalPrice",JSON.stringify(document.getElementById("totalAmount").innerText));
+          document.getElementById("couponConfirm").innerText = "'masai10' coupon used"
+        }
+        else{
+          alert("coupon code not valid.")
+        }
       }
 </script>
