@@ -7,11 +7,13 @@
     <title>Service App</title>
     <link rel="stylesheet" href="serviceAppStyle.css">
     <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
+    
    
 </head>
 <body>
     <!-- //navbar start -->
-    <div class="header">
+    <!-- <div class="header">
         <div class="nav1">
           <div class="left">
             <ul>
@@ -754,9 +756,13 @@
             </ul>
           </div>
         </div>
-      </div>
+      </div> -->
 
     <!-- //navbar end -->
+
+    <div id="headerDiv">
+
+    </div>
 
 
    <div id="mainContainer">
@@ -794,5 +800,19 @@
            <img src="./image/enquiry.png" alt="">
        </div>
    </div>
+
+   <div id="fresh">
+
+   </div>
 </body>
 </html>
+<script type="module">
+  import header from "./components/header.js"
+    import footer from "./components/footer.js"
+    let x=document.getElementById("fresh");
+    x.innerHTML=footer();
+
+    let y =  document.getElementById("headerDiv");
+    y.innerHTML=header();
+
+</script>

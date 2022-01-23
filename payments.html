@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payments | Vijay Sales</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
+
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -72,6 +75,11 @@
     </style>
   </head>
   <body>
+
+    <div id="headerDiv">
+
+    </div>
+
     <div id="container">
       <div id="paymentOptions">
         <div>
@@ -87,12 +95,12 @@
             <label for="upi">UPI</label> <br />
             <input type="radio" id="wallet" value="wallet" />
             <label for="wallet">Wallet</label> <br />
-            <input type="submit" name="" id="" value="Proceed" />
+            <input type="submit" name="" id="proceedBtn" value="Proceed" />
           </form>
         </div>
         <div id="cardDetails">
           <h4>Enter Card Details</h4>
-          <form action="" onsubmit="checkPayment(event)">
+          <form action="" onsubmit="checkPayment(event)" >
             <input type="text" placeholder="Name on card" required id="cardName"/><br />
             <input type="number" placeholder="Card Number" required /><br />
             <input
@@ -143,9 +151,16 @@
         </div>
       </div>
     </div>
+
+    <div id="fresh">
+
+    </div>
   </body>
 </html>
-<script>
+<script type="module">
+
+  let z = document.getElementById("proceedBtn");
+  z.addEventListener('click',viewCardForm);
   var count = 0;
   function viewCardForm(event) {
     event.preventDefault();
@@ -164,4 +179,13 @@
     localStorage.setItem("cardName", JSON.stringify(name));
     window.location.href = "successful.html"
   }
+
+
+  import header from "./components/header.js"
+    import footer from "./components/footer.js"
+    let x=document.getElementById("fresh");
+    x.innerHTML=footer();
+
+    let y =  document.getElementById("headerDiv");
+    y.innerHTML=header();
 </script>

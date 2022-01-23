@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart | Vijay Sales</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
     <link
       rel="shortcut icon"
       type="image/x-icon"
@@ -108,6 +110,11 @@
     </style>
   </head>
   <body>
+
+    <div id="headerDiv">
+
+    </div>
+
     <div id="container">
       <div id="productsMain">
         <div id="pinCheck">
@@ -192,9 +199,13 @@
         </div>
       </div>
     </div>
+
+    <div id="fresh">
+
+    </div>
   </body>
 </html>
-<script>
+<script type="module">
   document.getElementById("proceedToBuy").addEventListener('click',proceedToBuy);
   function proceedToBuy(){
     var totalAmount = document.getElementById("totalAmount").innerText;
@@ -255,4 +266,13 @@ console.log(singlePrice);
           alert("coupon code not valid.")
         }
       }
+
+
+      import header from "./components/header.js"
+    import footer from "./components/footer.js"
+    let x=document.getElementById("fresh");
+    x.innerHTML=footer();
+
+    let y =  document.getElementById("headerDiv");
+    y.innerHTML=header();
 </script>

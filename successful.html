@@ -5,14 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Successful | VijaySales</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
 </head>
 <body>
+
+    <div id="headerDiv">
+
+    </div>
+
     <div id="container">
         <h2 id="message"></h2>
     </div>
+
+    <div id="fresh">
+
+    </div>
 </body>
 </html>
-<script>
+<script type="module">
     var message = document.getElementById("message");
     var name = JSON.parse(localStorage.getItem("cardName"));
     
@@ -46,4 +57,13 @@ function orderDispatched(){
 function delivered(){
     message.innerText="Your order has been delivered.\nThank you for shopping with us.";
 }
+
+
+import header from "./components/header.js"
+    import footer from "./components/footer.js"
+    let x=document.getElementById("fresh");
+    x.innerHTML=footer();
+
+    let y =  document.getElementById("headerDiv");
+    y.innerHTML=header();
 </script>

@@ -70,7 +70,8 @@ function footer(){
 </div>
 <div id="foot">
 <div id="header">
-    <h1>vijay Sales</h1>
+    
+    <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/freebies/vijay-sales-logo-white.png" alt="VS Logo"/>
 </div>
 <div id="pop">
     <p class="sty">&nbsp;AGRA | &nbsp;AHMEDABAD | &nbsp;AURANGABAD | &nbsp;PUNE | &nbsp;BANGALORE | &nbsp;BHAVNAGAR | &nbsp;CHENNAI | &nbsp;COIMBATORE | &nbsp;DELHI | &nbsp;FARIDABAD | &nbsp;GURGAON | &nbsp;HYDERABAD | &nbsp;INDIRAPURAM | &nbsp;INDORE | &nbsp;JAIPUR | &nbsp;KAKINADA | &nbsp;KOLHAPUR | &nbsp;KOLKATA | &nbsp;LUCKNOW | &nbsp;MEERUT | &nbsp;MUMBAI</p>
