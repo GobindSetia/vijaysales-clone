@@ -1,4 +1,5 @@
 #mainContainer{
+    margin-top: 70px;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(2,40%);

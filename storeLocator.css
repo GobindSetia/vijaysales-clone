@@ -3,6 +3,7 @@ body{
     }
 
 #findContainer{
+    margin-top: 70px;
     display: flex;
     background-color: red;
     color: white;
