@@ -1,0 +1,278 @@
+ul {
+    list-style: none;
+    display: flex;
+}
+
+.header2 {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.orange {
+    font-size: 20px;
+    color: orange;
+    font-weight: bolder;
+}
+
+.white {
+    font-size: 20px;
+    font-weight: bolder;
+    color: blanchedalmond;
+}
+
+.green {
+    font-size: 20px;
+    font-weight: bolder;
+    color: green;
+}
+
+li {
+    font-weight: lighter;
+    font-size: 12px;
+    color: white;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.nav1 {
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+}
+
+.vr {
+    border: white 1px solid;
+}
+
+.header {
+    background-color: black;
+}
+
+hr {
+    color: white;
+}
+
+.myvs {
+    width: 55px;
+    height: 47px;
+}
+
+.ewarranty {
+    width: 58px;
+    height: 45px;
+}
+
+.right2 {
+    display: flex;
+    padding: 10px 10px 10px;
+}
+
+.logo {
+    margin-top: 5px;
+    width: 200px;
+    height: 40px;
+}
+
+.cartImage {
+    width: 50px;
+    margin-top: 0px;
+    height: 45px;
+}
+
+.searchBar {
+    margin-top: 1%;
+    width: 500px;
+    padding: 10px 10px 10px 10px;
+}
+
+.signin-btn {
+    margin-top: 5px;
+}
+
+.signin {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 40px;
+    padding-left: 40px;
+    cursor: pointer;
+}
+
+.nav2 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 70px;
+}
+
+#nav3 {
+    /* margin-top: 50px; */
+    justify-content: space-around;
+    display: flex;
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+}
+
+#na {
+    text-decoration: none;
+    color: black;
+}
+
+li {
+    list-style-type: none;
+}
+
+.menu-bar {
+    text-align: center;
+    position: absolute;
+}
+
+#grid {
+    display: flex;
+    /* grid-template-columns: repeat(6, 1fr); */
+    background-color: white;
+    color: black;
+}
+
+.menu-bar ul {
+    list-style-type: none;
+}
+
+
+.dropdown {
+    display: none;
+}
+
+.sdropdown {
+    background-color: white;
+    position: fixed;
+    display: flex;
+}
+
+.dropdown ul {
+    display: block;
+}
+
+.menu-bar ul li:hover .dropdown {
+    display: block;
+    justify-content: start;
+    text-align: start;
+}
+
+/* .sub-dropdown {
+    display: block;
+}
+
+.sub-dropdown {
+    display: none;
+}
+
+.dropdown ul li:hover .sub-dropdown {
+    cursor: pointer;
+    color: black;
+    justify-content: start;
+    text-align: start;
+} */
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.carousel {
+    margin-top: 4%;
+
+}
+
+.slideshow-container {
+    z-index: -20;
+}
+
+.mySlides {
+    display: none;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
