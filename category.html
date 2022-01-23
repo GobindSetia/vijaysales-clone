@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <style>
+        /* -----main Div----- */
+        #main{
+            display:flex;
+            width:95%;
+            margin:auto;
+             }
+
+        /* -------left Div------- */
+        #left-div{
+           /* width:20%; */
+           display:grid;
+           grid-template-columns: repeat(1,1fr);
+           grid-template-rows: 50px 200px 100px 200px 50px 50px 50px;
+           height:1000px;
+           margin:0px 25px;
+           /* border:1px solid purple; */
+        }
+
+       #left-div>div{
+           width:200px;
+           padding-left: 10px;
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+           /* border:1px solid pink; */
+       }
+
+       #price-range{
+           line-height: 7px;
+       }
+
+      #price-range>div{
+          display:flex;
+          justify-content: space-between;
+      }
+
+       /* -------Right Div------- */
+       /* --------upper Container------- */
+       #upper-container{
+           display:flex;
+           height:100px;
+           width:1200px;
+           justify-content: space-between;
+           align-items: center;
+           align-content:center;
+           /* border:1px solid yellow */
+       }
+       #upper-head-div{
+           display:flex;
+           gap:20px;
+       }
+       /* #mobile-div>h1{
+        font-family:RobotoMedium;
+        Font being Rendered:RobotoMedium;
+        border:1px solid red;
+       } */
+       #result-div{
+           margin-top:10px;
+       }
+       #sort-div{
+           /* margin-top: 20px; */
+           display:flex;
+           width:100px;
+           height:30px;
+           align-items: center;
+           justify-content: space-between;
+           border:1px solid orange;
+       }
+      #filter{
+          width:20px;
+      }
+
+      /* -------lower Container------- */
+       #container{
+           display:grid;
+           grid-gap:25px;
+           grid-template-columns:repeat(5,1fr);
+       }
+      
+       #container>div>h4+p{
+           color:red;
+           text-align: left;
+           /* margin-left:10px; */
+           /* font-size: 1.1em; */
+       }
+       #container>div>p:nth-child(1){
+           color:red;
+       }
+      
+       #container>div>div{
+           display:flex;
+           justify-content: space-between;
+           font-size: 1.1em;
+           /* background: red; */
+       }
+    
+       #container>div>div>p:nth-child(2){
+           color:blue;
+       }
+       #container>div>div>p:nth-child(1){
+           text-decoration: line-through;
+       }
+       #container>div>button{
+           /* padding-left:-20px; */
+           /* margin: auto; */
+           width:100%;
+           padding:2px 0px;
+           background:red;
+           color:white;
+           border-radius: 5px;;
+       }
+
+       /* --------media Query-------- */
+       /* --------for small screen------ */
+       @media only screen and (min-width:0px) and (max-width:375px){
+           #container{
+               display:flex;
+               flex-wrap: wrap;
+           }
+       }
+            
+       /* --------for medium screen------ */
+@media only screen and (min-width:375px) and (max-width:768px){
+    #container{
+               display:flex;
+               flex-wrap: wrap;
+           } 
+}
+    </style> 
+</head>
+<body>
+    <!-- -----main Div----- -->
+    <div id="main">
+
+        <!-- ------left Div------ -->
+    <div id="left-div">
+
+        <!-- -----first left div---- -->
+        <div>
+            <h2>FILTERS</h2>
+        </div>
+
+        <!-- -------Type Div------- -->
+        <div>
+            <h3>TYPE</h3>
+            <div>
+                <input type = "checkbox" id="iPhones" value="iPhones">
+                <label for = "iPhones">iPhones</label><br>
+                <input type="checkbox" id="smartPhones" value="smartPhones">
+                <label for="smartPhones">smartphones</label><br>
+                <input type="checkbox" id="basicPhones" value="basicPhones">
+                <label for="basicPhones">basic phones</label><br>
+            </div>
+        </div>
+
+     <!-- --------price range Div------------>
+        <div id="price-range">
+            <h3>PRICE RANGE</h3>
+            <div>
+                <div>
+                    <p>Rs.699</p>
+                </div>
+                <div>
+                    <p>Rs.212900</p>
+                </div>
+            </div>
+            
+            <hr>
+        </div>
+
+     <!---------brand Div----------->
+        <div>
+            <h3>BRAND</h3>
+            <div>
+                <input type = "checkbox" id="apple" value="apple">
+                <label for = "apple">Apple</label><br>
+                <input type="checkbox" id="onePlus" value="onePlus">
+                <label for="onePlus">One Plus</label><br>
+                <input type="checkbox" id="basicPhones" value="basicPhones">
+                <label for="basicPhones">basic phones</label><br>
+            </div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <!-- ---------right Div-------- -->
+    <div id="right-div">
+
+        <!-- -----------upper container---------- -->
+    <div id="upper-container">
+        <div id="upper-head-div">
+            <div id="mobile-div">
+                <h1>Buy Mobiles & Tablets Online</h1>
+            </div>
+            <div id="result-div">
+                <h3>We have got 1183 Results</h3>
+            </div>
+        </div>
+
+        <!-- -------sort Div------ -->
+        <div id="sort-div">
+            <div id="sort-by"><p>sort by</p></div>
+            <div id="sort-menu">
+                <select name="" id="filter" onchange="mySort()">
+                    <option value=""></option>
+                    <option value="new">New</option>
+                    <option value="popular">Popular</option>
+                    <option value="relevance">Relevance</option>
+                    <option value="low">Price:Low to High</option>
+                    <option value="high">Price:High To Low</option>
+                </select>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ---------lower container Div---------- -->
+   <div id="container"></div>
+
+   </div>
+</body>
+</html>
+<script>
+    let database=JSON.parse(localStorage.getItem("database"));
+    let mobilesData = JSON.parse(localStorage.getItem("mobilesData"));
+    let container = document.querySelector("#container");
+    console.log("database:",database);
+    console.log("mobilesData:",database);
+    database.mobilesData.forEach(function(el){
+        let coupon = document.createElement("p");
+        let mainDiv=document.createElement("div");
+        let priceOfferDiv=document.createElement("div");
+        let img = document.createElement("img");
+        let h4=document.createElement("h4");
+        let newPrice=document.createElement("p");
+        let oldPrice=document.createElement("p");
+        let offer=document.createElement("p");
+        let btn=document.createElement("button");
+        img.setAttribute("src",el.img);
+        img.height="200";
+        img.width="200";
+        coupon.innerHTML="DISCOUNT COUPON"
+        h4.innerHTML=el.feature;
+        newPrice.innerHTML="Rs."+el.newPrice;
+        oldPrice.innerHTML="Rs"+el.oldPrice;
+        offer.innerHTML=el.offer+"off";
+        btn.innerHTML="OFFER AVAILABLE";
+        priceOfferDiv.append(oldPrice,offer);
+        mainDiv.append(coupon,img,h4,newPrice,priceOfferDiv,btn);
+        container.append(mainDiv);
+    })
+
+    // ---------sort function-----
+    let sortedArr;
+    function mySort(){
+        let filter=document.querySelector("#filter").value;
+    if(filter="low"){
+        sortedArr=database.mobilesData.sort(function(a,b){
+        if(a>b){
+            return 1;
+        }
+        if(a<b){
+            return -1;
+        }
+        return 0;
+    })
+    
+    }else if(filter=="high"){
+        sortedArr=database.mobilesData.sort(function(a,b){
+        if(a>b){
+            return -1;
+        }
+        if(a<b){
+            return 1;
+        }
+        return 0;
+    })
+    }
+    
+    }
+   
+</script>

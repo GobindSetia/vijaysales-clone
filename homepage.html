@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <style>
+        #bigContainer{
+            display:grid;
+            grid-template-rows: repeat(4,450px);
+            border:1px solid purple;
+        }
+        #bigContainer>div{
+            border:1px solid red;
+        }
+        #head-part{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            border:1px solid pink;
+        }
+
+        .container>div:nth-child(2){
+            display:grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        #mobile{
+            display:flex;
+        }
+
+        /* -----------all properties-------- */
+        .container>div:nth-child(2){
+           display:grid;
+           grid-gap:25px;
+           grid-template-columns:repeat(5,1fr);
+       }
+       .container>div:nth-child(2)>div{
+        /* text-align:center; */
+        border:1px solid red;
+       }
+      
+       .container>div:nth-child(2)>div>h4+p{
+           color:red;
+           text-align: left;
+           margin-left:10px;
+           /* font-size: 1.1em; */
+       }
+       .container>div:nth-child(2)>div>p:nth-child(1){
+           color:red;
+       }
+      
+       .container>div:nth-child(2)>div>div{
+           display:flex;
+           justify-content: space-around;
+           font-size: 1.1em;
+           /* background: red; */
+       }
+    
+       .container>div:nth-child(2)>div>div>p:nth-child(2){
+           color:blue;
+       }
+       .container>div:nth-child(2)>div>div>p:nth-child(1){
+           text-decoration: line-through;
+       }
+       .container>div:nth-child(2)>div>button{
+           /* padding-left:-20px; */
+           /* margin: auto; */
+           width:100%;
+           padding:2px 0px;
+           background:red;
+           color:white;
+           border-radius: 5px;;
+       }
+
+       /* --------media Query-------- */
+       /* --------for small screen------ */
+       @media only screen and (min-width:0px) and (max-width:375px){
+           #container{
+               display:flex;
+               flex-wrap: wrap;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div id="bigContainer">
+
+        <!-- -------container1------ -->
+    <div class="container">
+        <div id="head-part">
+            <div><h1>BEST DEALS</h1></div>
+            <div><button>VIEW ALL</button></div>
+        </div>
+        <div id="general"></div>
+    </div>
+
+     <!-- ----------container2------- -->
+     <div class="container">
+        <div id="head-part">
+            <div><h1>LAPTOPS</h1></div>
+            <div><button>VIEW ALL</button></div>
+        </div>
+
+        <div id="laptop"></div>
+     </div>
+    
+   <!-- --------container3-------- -->
+   <div class="container">
+        <div id="head-part">
+            <div><h1>SMART PHONES</h1></div>
+            <div><button>VIEW ALL</button></div>
+        </div>
+
+        <div id="mobile"></div>
+   </div>
+    
+   <!-- --------container4--------- -->
+   <div class="container">
+            <div id="head-part">
+                <div><h1>TELEVISIONS</h1></div>
+                <div><button>VIEW ALL</button></div>
+            </div>
+    
+            <div id="television"></div>
+   </div>
+
+   <!-- ------container5--------
+   <div id="container5">
+    <div id="head-part">
+        <div><h1>BEST DEALS</h1></div>
+        <div><button>VIEW ALL</button></div>
+    </div>
+
+    <div id=""></div>
+</div> -->
+
+    </div>
+</body>
+</html>
+<script>
+    let database=JSON.parse(localStorage.getItem("database"));
+    let mobile=document.querySelector("#mobile");
+    let general=document.querySelector("#general");
+    let laptop=document.querySelector("#laptop");
+    let television=document.querySelector("#television");
+
+    let arr=[general,laptop,mobile,television];
+    let mainDiv;
+    console.log("myArr;---",arr);
+    console.log("database:----",database);
+    for(let i=0;i<5;i++){
+        mainDiv=append(database.mobilesData[i]);
+        mobile.append(mainDiv);
+    }
+    for(let i=0;i<5;i++){
+        mainDiv=append(database.laptopsData[i]);
+        laptop.append(mainDiv);
+    }
+    for(let i=0;i<5;i++){
+        mainDiv=append(database.televisionsData[i]);
+        television.append(mainDiv);
+    }
+    for(let i=0;i<5;i++){
+        mainDiv=append(database.generalData[i]);
+        general.append(mainDiv);
+    }
+    // mainDiv=append(database.mobilesData.img);
+    // console.log
+    // general.append(mainDiv)
+
+
+    // for(let i=0;i<database.length;i++){
+    //    mainDiv=append(database[i]);
+    //    console.log(mainDiv);
+    //    arr[i].append(mainDiv);
+    // }
+    
+    // database.forEach(function(el,index){
+    //    if(el[index].category=="mobile"){
+    //     mainDiv=append(el[index]);
+    //     mobile.append(mainDiv)
+    //    }else if(el[index].category=="laptop"){
+    //     mainDiv=append(el[index]);
+    //     laptop.append(mainDiv) 
+    //    }else if(el[index].category=="television"){
+    //     mainDiv=append(el[index]);
+    //     television.append(mainDiv)  
+    //    }else if(el[index].category=="general"){
+    //     mainDiv=append(el[index]);
+    //     general.append(mainDiv);  
+    //    }
+    // }) 
+    
+   function append(el){
+        let mainDiv=document.createElement("div");
+        let priceOfferDiv=document.createElement("div");
+        let img = document.createElement("img");
+        let h4=document.createElement("h4");
+        let newPrice=document.createElement("p");
+        let oldPrice=document.createElement("p");
+        let offer=document.createElement("p");
+        let btn=document.createElement("button");
+        img.setAttribute("src",el.img);
+        img.height="150";
+        img.width="150";
+        h4.innerHTML=el.feature;
+        newPrice.innerHTML="Rs."+el.newPrice;
+        oldPrice.innerHTML="Rs"+el.oldPrice;
+        offer.innerHTML=el.offer+"off";
+        btn.innerHTML="OFFER AVAILABLE";
+        priceOfferDiv.append(oldPrice,offer);
+        mainDiv.append(img,h4,newPrice,priceOfferDiv,btn);
+        return mainDiv;
+    }
+</script>

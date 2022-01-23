@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Admin</title>
+    <style>
+        #container{
+            width:60%;
+            margin:auto;
+        }
+        #container>form>input{
+            height:30px;
+            width:400px;
+            margin:10px;
+        }
+        #container>form>select{
+            height:30px;
+            width:400px;
+            margin:10px;  
+        }
+#submit{
+    color:white;
+    background: teal;
+}
+#submit:hover{
+    background:red;
+    color: white;
+}
+
+    </style>
+</head>
+<body>
+
+    <div id="container">
+        <h1>Admin Form </h1>
+        <form action="" id="form">
+            <select name="" id="category">
+                <option value="">Select category here</option>
+                <option value="mobile">mobile</option>
+                <option value="laptop">laptop</option>
+                <option value="television">television</option>
+                <option value="general">general</option>
+            </select><br>
+            <input type="text"id="img" placeholder="put image url here"><br>
+            <input type="text" id="feature" placeholder="Type feature here"><br>
+            <input type="text" id="newPrice" placeholder="Type new price here"><br>
+            <input type="text" id="oldPrice" placeholder="Type old price here"><br>
+            <input type="text" id="offer" placeholder="Type offer here"><br>
+            <input type="submit" id="submit">
+        </form>
+    </div>
+   
+</body>
+</html>
+<script>
+    let database=[];
+    let mobilesData=JSON.parse(localStorage.getItem("mobilesData"))||[];
+    let laptopsData=JSON.parse(localStorage.getItem("laptopsData"))||[];
+    let televisionsData=JSON.parse(localStorage.getItem("televisionsData"))||[];
+    let generalData=JSON.parse(localStorage.getItem("generalData"))||[];
+    document.querySelector("#form").addEventListener("submit",storeData);
+    function storeData(event){
+        event.preventDefault();
+        let obj={
+            category:category.value,
+            img:img.value,
+            feature:feature.value,
+            newPrice:newPrice.value,
+            oldPrice:oldPrice.value,
+            offer:offer.value
+        }
+      console.log(obj.category);
+        if(obj.category=="mobile"){
+            mobilesData.push(obj);
+            localStorage.setItem("mobilesData",JSON.stringify(mobilesData));
+          }else if(obj.category=="laptop"){
+            laptopsData.push(obj);
+            localStorage.setItem("laptopsData",JSON.stringify(laptopsData));
+        }else if(obj.category=="television"){
+            televisionsData.push(obj);
+            localStorage.setItem("televisionsData",JSON.stringify(televisionsData));
+        }else  if(obj.category=="general"){
+            generalData.push(obj);
+            localStorage.setItem("generalData",JSON.stringify(generalData))
+        }
+            let database={
+          mobilesData:mobilesData,
+          laptopsData:laptopsData,
+          televisionsData:televisionsData,
+          generalData:generalData
+       }
+       localStorage.setItem("database",JSON.stringify(database));
+       console.log("database:-------",database);
+        }
+       
+       
+    // database.push(mobilesData);
+    // database.push(laptopsData);
+    // database.push(televisionsData);
+    // database.push(generalData);
+    // console.log(database);
+    // localStorage.setItem("database",JSON.stringify(database));
+    // localStorage.setItem("database",JSON.stringify(database));
+    // localStorage.removeItem("database");
+    // localStorage.removeItem("mobilesData");
+    // localStorage.removeItem("laptopsData");
+    // localStorage.removeItem("generalData");
+    // localStorage.removeItem("televisionsData");
+</script>
