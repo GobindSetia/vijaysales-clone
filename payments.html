@@ -72,6 +72,16 @@
         font-size: 30px;
         margin-bottom: 30px;
       }
+      #cardDetails button{
+        width: 400px;
+        height: 40px;
+        border: 1px solid grey;
+        border-radius: 10px;
+        background-color: rgb(255, 59, 59);
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+      }
     </style>
   </head>
   <body>
@@ -124,7 +134,7 @@
               max="2040"
               required
             /><br />
-            <input type="submit" />
+            <button id="formSubmit">Submit</button>
           </form>
         </div>
       </div>
@@ -173,13 +183,14 @@
     }
   }
 
-  function checkPayment(event){
-    event.preventDefault();
-    var name = document.getElementById("cardName").value;
-    localStorage.setItem("cardName", JSON.stringify(name));
+  document.getElementById("formSubmit").addEventListener("click",checkPayment)
+  function checkPayment(){
     window.location.href = "successful.html"
   }
 
+  var finalPrice = JSON.parse(localStorage.getItem("finalPrice"));
+  document.getElementById("totalPrice").innerText = finalPrice;
+  document.getElementById("totalAmount").innerText = finalPrice;
 
   import header from "./components/header.js"
     import footer from "./components/footer.js"

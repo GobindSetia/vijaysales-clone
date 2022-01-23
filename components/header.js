@@ -32,7 +32,7 @@ function header(){
     <div class="nav2">
       <div class="header2">
         <div class="logo">
-          <a href="#">
+          <a href="index.html">
             <img
               src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/freebies/vijay-sales-logo-white.png"
               alt="VS Logo"
@@ -60,17 +60,18 @@ function header(){
           />
         </div>
         <div class="signin-btn">
-          <a href="#"> <button class="signin">Hi, Sign in</button></a>
+          <a href="./SIGNIN_PAGE/signin.html"> <button class="signin">Hi, Sign in</button></a>
         </div>
         <div
           title="Cart"
           class="col-sm-1 text-right padding-top3 cart-icon"
         >
-          <img
-            src="https://d2xamzlzrdbdbn.cloudfront.net/imgwebsite/cart.png"
-            id="cartImage"
-            alt="Cart"
-          />
+        <a href="cart.html"><img
+        src="https://d2xamzlzrdbdbn.cloudfront.net/imgwebsite/cart.png"
+        id="cartImage"
+        alt="Cart"
+      /></a>
+          
         </div>
       </div>
     </div>
@@ -155,7 +156,7 @@ function header(){
             </div>
           </li>
           <li>
-            <a id="na" href="#">MOBILES & TABLETS</a>
+            <a id="na" href="category.html">MOBILES & TABLETS</a>
             <div class="dropdown">
               <div class="sdropdown">
                 <ul class="left">

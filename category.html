@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category Page</title>
+    <title>Mobile Phones | VijaySales</title>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://d2xamzlzrdbdbn.cloudfront.net/images/fevicon.ico"
+    />
     <style>
         /* -----main Div----- */
         #main{
@@ -135,6 +142,9 @@
     </style> 
 </head>
 <body>
+    <div id="headerDiv">
+
+    </div>
     <!-- -----main Div----- -->
     <div id="main">
 
@@ -229,9 +239,10 @@
    <div id="container"></div>
 
    </div>
+   
 </body>
 </html>
-<script type>
+<script type="module">
    
 
 
@@ -375,9 +386,9 @@
                 category: "mobile",
                 feature: "Apple iPhone 12 (128 GB, Blue)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/f0e87916-ef3d-49ba-a336-786ea2c5b06b_182x182.jpg",
-                newPrice: "67,355",
+                newPrice: "62,605",
                 offer: "5%",
-                oldPrice: "70,900",
+                oldPrice: "65,900",
             },
 
             {
@@ -632,5 +643,17 @@ localStorage.setItem("generalData",JSON.stringify(generalData2));
     })
     }
     
+    }
+
+    import header from "./components/header.js"
+
+    let y =  document.getElementById("headerDiv");
+    y.innerHTML=header();
+
+    var cs = document.querySelector("#container>div:nth-child(1)");
+    cs.addEventListener("click",goToUnique);
+
+    function goToUnique(){
+        window.location.href = "uniqueProduct.html"
     }
 </script>

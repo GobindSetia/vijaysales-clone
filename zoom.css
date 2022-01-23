@@ -505,6 +505,7 @@ cursor: pointer;
 }
 #ulofdiss{
 list-style-type:none;
+display: block;
 
 }
 #generalfeatureinfo{
