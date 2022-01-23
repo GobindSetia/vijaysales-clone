@@ -70,7 +70,7 @@ check(flag,a);
 }
 function check(flag,a){
 if(flag == true && a==true) {
-    window.location.href="home.html"
+    window.location.href="/index.html"
 }
 else{
     alert("wrong credentials")
