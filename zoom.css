@@ -1,9 +1,9 @@
-#ul{float: left;
+#ul1{float: left !important;
     text-decoration:none ;
     list-style-type:none;
  }
- #ul li{margin-bottom: 10px;}
- #ul li img{width: 70px; height: 70px;}
+ #ul1 li{margin-bottom: 10px;}
+ #ul1 li img{width: 70px; height: 70px;}
 
 
  .big_img{
