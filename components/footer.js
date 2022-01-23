@@ -1,5 +1,6 @@
 function footer(){
     return `<div id="Footer">
+
     <div>
     <h4> <span id="l1">USEFUL LINKS</span></h4>
     <p>HOME</p>
