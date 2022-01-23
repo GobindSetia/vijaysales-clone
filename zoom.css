@@ -1,0 +1,776 @@
+#ul{float: left;;
+    text-decoration:none ;
+    list-style-type:none;
+ }
+ #ul li{margin-bottom: 10px;}
+ #ul li img{width: 70px; height: 70px;}
+
+
+ .big_img{
+     width: 350px;height: 400px; float: left;margin-top: 20px;
+     margin-left:10px ;
+ }
+
+
+
+
+ #darectionspan{
+    margin: 20px 0px 10px 90px;
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#darecprecent{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    color: rgb(141, 135, 129);
+}
+
+
+ #productbox{
+           
+    margin: 1px 3% 1px 3%;
+    display: flex;
+  
+
+    
+}
+
+#imgbox{
+    width: 40%;
+    border: 1px solid blue;
+    height: 450px;
+    margin-left: 10px;
+    border: transparent;
+}
+#productdiss{
+    width: 53%;
+    margin-left:20px;
+  
+    height: 600px;
+    overflow: scroll;
+ 
+  
+ 
+    
+}
+
+#productdiss::-webkit-scrollbar {
+display: none;
+}
+#proname{
+    font-size: 19px;
+    font-weight: 500;
+    font-family:Arial, Helvetica, sans-serif;
+    color:rgb(41, 40, 40);
+}
+#ratingclick{
+    color: rgb(69, 69, 214);
+    font-size: 16px;
+    font-family:sans-serif ;
+    font-weight: 600;
+    margin-left: 5px;
+    
+}
+#ratingclick:hover{
+    cursor: pointer;
+}
+#star{
+    font-size: 16px;
+    font-weight: 500;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color:rgb(22, 158, 163) ;
+    color: white;
+}
+#ratebox{
+    display: flex;
+    line-height: 20px;
+    gap: 10px;
+    font-weight: 600;
+    font-family: sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+#dis{
+    padding-top: 20px;
+    margin-left: 20px;
+    color: rgb(11, 199, 111);
+}
+#mrp{
+    color: rgb(143, 133, 133);
+
+    
+}
+#all{
+     line-height: 0px;
+     font-size: 12px;
+}
+#emi{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(118, 126, 118);
+    padding: 30px 2px 5px 2px;
+}
+#plans{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: blue;
+}
+#plans:hover{
+    cursor: pointer;
+}
+#emibox{
+    margin-top: 13px;
+}
+#earn{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 10%;
+    margin-top: 5px;
+}
+#rewardbox{
+    display: flex;
+    margin-top: 3%;
+}
+#rewaimg img{
+    height: 30px;
+}
+#more{
+    font-size: 13px;
+    color: blue;
+    cursor: pointer;
+    margin-left: 10px;
+}
+#offers{
+    width: 99.5%;
+    height: 30px;
+    border: 1px solid rgb(182, 181, 181);
+    padding: 10px 1px 2px 0px;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#off{
+    margin-left: 20px;
+}
+#bankoff{
+    width: 99.5%;
+    height: 30px;
+    border: 1px solid rgb(182, 181, 181);
+    padding: 10px 1px 2px 0px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    gap: 18px;
+    cursor: pointer;
+}
+#bank{
+    color: red;
+    
+}
+#bankdiv{
+ 
+    height: 100%;
+    width: 16%;
+    margin-left: 10px;
+border: red;
+border-style: none none solid none;
+
+}
+#lowcost{
+    color: rgb(143, 133, 133);
+}
+#offimg{
+    height: 30px;
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 2%;
+  
+
+}
+#offerdetels{
+    width: 99.5%;
+  
+    border: 1px solid rgb(182, 181, 181);
+ 
+}
+#tenoff{
+    width: 98%;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    gap: 4%;
+}
+#offtenpercent{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-left: 2%;
+}
+#tc{
+font-size: 18px;
+font-weight: 600;
+color: blue;
+cursor: pointer;
+}
+
+#cartbuybox{
+    display: flex;
+    height: 50px;
+    width: 100%;
+    gap: 60px;
+padding: 5px 2px;
+margin: auto;
+   
+    margin-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#projectimg{
+  
+   height: 450px;
+}
+#addtocart{
+  border: 1px solid red;
+    width: 55%;
+    text-align: center;
+    padding: 15px 2px 0px 2px;
+    cursor: pointer;
+   
+
+}
+#buy{
+    background-color: red;
+    width: 55%;
+    text-align: center;
+    padding: 15px 2px 0px 2px;
+   cursor: pointer;
+}
+#spancart{
+ 
+font-size: 18px;
+ color: red;
+}
+#buynow{
+    color: white;
+
+}
+#delivery{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 99%;
+    border: 1px solid rgb(182, 181, 181);
+    gap: 40px;
+    padding: 20px 2px;
+    margin-top: 20px;
+    height: 20px;
+
+}
+#del{
+    margin-left: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color:rgb(70, 69, 66);
+}
+#pin{
+    outline: none;
+
+    border: blue;
+    font-size: 18px;
+    font-weight: 600;
+ 
+    border: none none solid none;
+  
+
+   
+}
+#check{
+    color: blue;
+    font-size: 15px;
+    margin-left: 0px;
+    cursor: pointer;
+    font-weight: 600;
+}
+#pp{
+    width: 35%;
+    border: 1px blue;
+    margin-left: 40px;
+    border-style: none none solid none;
+    height: 100%;
+ 
+}
+#exchange{
+    width: 98%;
+    height: 40px;
+    border: 1px solid rgb(182, 181, 181);
+    margin-top: 20px;
+    padding: 10px 0px 0px 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#offffex{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(55, 56, 55);
+}
+#exsp{
+    font-size: 18px;
+    color: rgb(131, 131, 139);
+}
+#radioss{
+    font-size: 40px;
+}
+#exchangetwo{
+
+    width: 98%;
+    height: 40px;
+    border: 1px solid rgb(182, 181, 181);
+  
+    padding: 10px 0px 0px 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#exsptow{
+    color: red;
+    font-size: 16px;
+}
+#exchangetheree{
+    width: 98%;
+    height: 40px;
+    border: 1px solid rgb(182, 181, 181);
+  margin-top: 20px;
+    padding: 10px 0px 0px 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+#offffexthree{
+    font-size: 18px;
+    font-weight: 600;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+   
+}
+#warranty{
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 1px solid rgb(182, 181, 181);
+}
+#brand{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(63, 63, 66);
+}
+#spanwarr{
+    color: rgb(147, 147, 153);
+}
+#include{
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+}
+ #includespan{
+     color: rgb(22, 158, 163);
+ }
+ #formore{
+     color: blue;
+     cursor: pointer;
+ }
+ #totaladd{
+     display: flex;
+   
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    border: 1px solid rgb(182, 181, 181);
+ 
+ }
+ #sum{
+     display: flex;
+     width: 70%;
+     margin-left: 10px;
+     gap: 20px;
+     line-height: 10px;
+ }
+ #productone{
+     font-size: 14px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     font-weight: 400;
+     color: rgb(92, 92, 94);
+ }
+#towithwar{
+    font-size: 18px;
+}
+#sign{
+    font-size: 18px;
+    margin-top: 11%;
+}
+
+#buy2{
+    background-color: red;
+    border: 1px solid yellow;
+    width: 40%;
+    height: 35px;
+    margin: 10px 10px 0px 0px;
+    text-align: center;
+    padding: 20px 0px 0px 0px;
+    font-size: 18px;
+}
+#highlightsdiss{
+    width: 98%;
+ 
+    border: 1px solid rgb(182, 181, 181);
+  
+    padding: 10px 0px 0px 10px ;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 25px;
+    color: rgb(109, 104, 104);
+    font-weight: 600;
+}
+#viewdetails{
+    width: 99.5%;
+    border: 1px solid rgb(182, 181, 181);
+    height: 40px;
+    
+}
+#daddd{
+   color: blue; 
+   padding: 10px 0px 0px 20px;
+   margin:auto;
+   font-family: Arial, Helvetica, sans-serif;
+   cursor: pointer;
+
+}
+#prodes{
+    width: 95%;
+    margin: auto;
+    border: 1px solid rgb(182, 181, 181);
+    height: 40px;
+    margin-top: 10px;
+}
+#prodes>:nth-child(1){
+    font-size: 18px;
+    font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 0.5%;
+    color: rgb(71, 70, 68);
+    margin-left: 20px;
+   
+}
+#proimgdis{
+    width: 95%;
+    border: 1px solid rgb(182, 181, 181);
+    margin: auto;
+}
+#prodissimgss{
+    width: 100%;
+}
+#productinfo{
+    width: 95%;
+    border: 1px solid rgb(182, 181, 181);
+    margin: auto;
+    margin-top: 20px;
+}
+#lineproductinfo{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 5px 0px 0px 20px;
+}
+#pronameinfo{
+    font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(90, 89, 87);
+    margin: 2px 0px 0px 20px;
+}
+
+#gnfeature{
+    width: 95%;
+    border: 1px solid rgb(182, 181, 181);
+    margin: auto;
+   display: flex;
+}
+#productgeneralleft{
+    width: 48%;
+    margin: auto;
+    
+}
+#productgeneralright{
+    width: 48%;
+    margin: auto;
+    margin-top: 5px;
+}
+#ulofdiss{
+list-style-type:none;
+
+}
+#generalfeatureinfo{
+font-size: 18px;
+font-weight: 600;
+font-family:Arial, Helvetica, sans-serif;
+margin-left: 20px;
+color: rgb(47, 48, 48);
+margin-top: 20px;
+
+}
+#tabelformet{
+display: flex;
+width: 90%;
+margin: auto;
+
+}
+#namehedingoftable{
+width: 50%;
+border: 1px solid rgb(182, 181, 181);
+color: rgb(47, 48, 48);
+font-size: 12px;
+padding: 0px 5px 0px 20px;
+font-weight: 600;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+background-color: rgb(255, 255, 238);
+}
+
+#namedissoftable{
+width: 50%;
+border: 1px solid rgb(182, 181, 181);
+color: rgb(125, 129, 129);
+font-size: 12px;
+padding: 1px 5px 1px 20px;
+line-height: 18px;
+font-weight: 600;
+}
+#ratingrev{
+width: 95%;
+margin: auto;
+border: 1px solid rgb(182, 181, 181);
+margin-top: 20px;
+
+
+}
+#ratingrev>p{
+font-size: 18px;
+font-weight: 600;
+padding: 1px 0px 1px 10px;
+font-family:Arial, Helvetica, sans-serif;
+line-height: 1px;
+}
+
+#allrevi{
+width: 95%;
+margin: auto;
+border: 1px solid rgb(182, 181, 181);
+
+
+}
+#allrevi>:nth-child(1){
+width: 20%;
+height: auto;
+border-top: 2px solid green;
+margin-top: 30px;
+margin-left: 10px;
+text-align-last: center;
+border-style: solid solid none solid;
+border-left: 1px solid black;
+border-right: 1px solid black;
+height: 50px;
+
+}
+#revvvv{
+margin-top: 2px;
+font-size: 18px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+color: rgb(85, 84, 83);
+}
+#allrevi>:nth-child(2){
+margin-top: 20px;
+font-size: 18px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 30px;
+}
+#ratingrevhight{
+width: 90%;
+margin: auto;
+display: flex;
+border: 1px solid rgb(182, 181, 181);
+}
+#ratingrevhight>:nth-child(1){
+width: 20%;
+font-size: 25px;
+text-align:center;
+padding: 4% 0px 4% 0px;
+}
+#kkddkdkk{
+color:rgb(255,193,7);
+font-size: 40px;
+}
+#rarra{
+color: black;
+font-size: 30px;
+font-weight: 800;
+font-family: Arial, Helvetica, sans-serif;
+}
+#ratingrevhight>:nth-child(2){
+width: 20%;
+font-size: 25px;
+text-align:center;
+}
+#ratingrevhight>:nth-child(3){
+width: 25%;
+
+text-align:center;
+}
+#mainsss{
+width: 90%;
+margin: auto;
+background-color: burlywood;
+height: 10px;
+display: flex;
+}
+
+#kskssksk{
+width: 50%;
+display: grid;
+margin-top: 10px;
+margin-bottom: 20px;
+
+}
+#indiseddivto{
+display: grid;
+grid-template-columns: 50px 200px 50px;
+grid-template-areas: 
+"a b c";
+margin-top: 20px;
+font-size: 16px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+grid-gap: 5px;
+}
+#indiseddivto>:nth-child(1){
+grid-area: a;
+}
+#indiseddivto>:nth-child(2){
+grid-area: b;
+background-color: burlywood;
+border-radius: 10px;
+height: 10px;
+}
+#indiseddivto>:nth-child(3){
+grid-area: c;
+}
+#ndndddn{
+background-color: green;
+width: 69%;
+height: 100%;
+border-radius: 10px;
+}
+
+#ndndddndd{
+background-color: green;
+width: 39%;
+height: 100%;
+border-radius: 10px;
+}
+#ndndddnddgg{
+background-color: green;
+width: 4%;
+height: 100%;
+border-radius: 10px;
+}
+#ratingrevhight>:nth-child(4){
+width: 25%;
+
+text-align:center;
+margin-top: 8%;
+background-color: red;
+margin-left: 9%;
+height: 30px;
+color: white;
+cursor: pointer;
+line-height: 0px;
+}
+#ExpertUserReviews{
+width: 90%;
+margin: auto;
+border: 1px solid rgb(182, 181, 181);
+}
+#ExpertUserReviews>:nth-child(1){
+font-size: 30px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 500;
+}
+#revboxofex{
+width: 95%;
+margin: auto;
+margin-top: 30px;
+
+}
+#def{
+font-size: 20px;
+background-color: rgb(11, 199, 111);
+color: white;
+padding: 3px 10px 3px 10px;
+border-radius: 5px;
+margin-left: 20px;
+}
+#defnameid{
+font-size: 18px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+padding: 3px 10px 3px 10px;
+}
+#defnameidtime{
+font-size: 16px;
+font-weight: 700;
+font-family:Arial, Helvetica, sans-serif;
+margin-left: 20px;
+color: rgb(95, 93, 93);
+line-height: 26px;
+}
+#hdhhdhdhdhd{
+margin-top: 20px;
+}
+#temmorerev{
+width: 87%;
+margin: auto;
+font-size: 12px;
+font-weight: 600;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+padding: 4px 20px 0px 20px;
+border: 1px solid rgb(182, 181, 181);
+height: 30px;
+color: rgb(22, 83, 253);
+cursor: pointer;
+
+}
+#lastdivofpagess{
+width: 100%;
+display: flex;
+margin: 0px;
+margin-top: 80px;
+
+}
+
+#lastdivofpagessddd{
+width: 25%;
+border: 1px solid rgb(182, 181, 181);
+line-height: 10px;
+text-align: center;
+
+}
+
+#lastdivofpagess img{
+height: 60px;
+margin-top: 10px;
+
+}
+#freeshipng{
+font-size: 18px;
+font-family:'Times New Roman', Times, serif;
+font-weight: 600;
+}
+
