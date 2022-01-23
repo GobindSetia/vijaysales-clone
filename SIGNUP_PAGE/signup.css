@@ -1,0 +1,104 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+#container{
+    width:350px;
+    box-shadow:  rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    margin: auto;
+    padding: 40px;
+    margin-top: 50px;
+}
+#email{
+    width:350px;
+    border:none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+button{
+    margin-top: 40px;
+    width:350px;
+    height:30px;
+    color:white;
+    background-color: red;
+    cursor: pointer;
+}
+div>p{
+    padding-top: 0px;
+    font-size: small;
+    color:darkgray;
+    margin-bottom: 20px;
+}
+#inst>p{
+    color:black;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+
+}
+#main{
+    display: flex;
+    margin-left: 40px;
+    margin-top: 25px;
+}
+.one{
+    width:30px;
+    height:30px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+#newone{
+    
+    display: flex;
+    text-align: center;
+    margin-left: 100px;
+}
+.color{
+    cursor: pointer;
+}
+#image{
+    cursor: pointer;
+}
+#pass{
+    width:350px;
+    border:none;
+    
+    border-bottom: 1px solid black;
+    font-size: 15px;
+
+
+}
+#otp{
+    width:200px;
+    border:none;
+    border-bottom: 1px solid black;
+    font-size: 15px;
+    margin-bottom: 40px;
+
+}
+
+#newone1{
+   
+    border: none;
+    background-color: white;
+    color:red;
+    margin-top: none;
+
+
+}
+#send{
+    margin-bottom: 40px;
+    width:380px;
+    display: flex;
+    justify-content: space-between;
+}
+#resend{
+  
+    margin-top: 0px;
+    background-color: white;
+    color:red;
+    border: none;
+   
+}
+

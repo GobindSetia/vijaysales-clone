@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payments | Vijay Sales</title>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://d2xamzlzrdbdbn.cloudfront.net/images/fevicon.ico"
+    />
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        background-color: rgb(245, 247, 247);
+      }
+      #container {
+        width: 90%;
+        margin: 20px auto;
+        display: flex;
+        gap: 20px;
+      }
+      #container > div > div {
+        background-color: white;
+      }
+      #paymentOptions {
+        flex: 5;
+      }
+      #paymentOptions > div {
+        padding: 20px;
+        border: 1px solid grey;
+      }
+      #rightSection {
+        flex: 2;
+      }
+      #coupons {
+        border: 1px solid grey;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      #priceDetails {
+        border: 1px solid grey;
+      }
+      #products > div {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      #priceDetails > div > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      #priceDetails > div {
+        border-bottom: 1px solid grey;
+      }
+      #cardDetails {
+        visibility: hidden;
+      }
+      #cardDetails input {
+        width: 400px;
+        border-radius: 10px;
+        height: 40px;
+        border: 1px solid grey;
+      }
+      #paymentOptions input,
+      #paymentOptions label {
+        font-size: 30px;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="paymentOptions">
+        <div>
+          <h2>Select Payments Options</h2>
+        </div>
+        <div>
+          <form action="" onsubmit="viewCardForm(event)">
+            <input type="radio" id="card" value="card" />
+            <label for="card">Debit/Credit Card</label> <br />
+            <input type="radio" id="net" value="net" />
+            <label for="net">Net Banking</label> <br />
+            <input type="radio" id="upi" value="upi" />
+            <label for="upi">UPI</label> <br />
+            <input type="radio" id="wallet" value="wallet" />
+            <label for="wallet">Wallet</label> <br />
+            <input type="submit" name="" id="" value="Proceed" />
+          </form>
+        </div>
+        <div id="cardDetails">
+          <h4>Enter Card Details</h4>
+          <form action="" onsubmit="checkPayment(event)">
+            <input type="text" placeholder="Name on card" required id="cardName"/><br />
+            <input type="number" placeholder="Card Number" required /><br />
+            <input
+              type="number"
+              placeholder="Card CVV"
+              min="100"
+              max="999"
+              required
+            /><br />
+            <input
+              type="number"
+              placeholder="Exp. Month"
+              min="1"
+              max="12"
+              required
+            /><br />
+            <input
+              type="number"
+              placeholder="Exp. Year"
+              min="2022"
+              max="2040"
+              required
+            /><br />
+            <input type="submit" />
+          </form>
+        </div>
+      </div>
+
+      <div id="rightSection">
+        <div id="priceDetails">
+          <div><h4>PRICE DETIALS</h4></div>
+          <div>
+            <div>
+              <p>Price</p>
+              <p>₹ <span id="totalPrice"></span> </p>
+            </div>
+            <div>
+              <p>Delivery Charge</p>
+              <p>FREE</p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h5>Total Amount</h5>
+              <h5>₹ <span id="totalAmount"></span></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  var count = 0;
+  function viewCardForm(event) {
+    event.preventDefault();
+    if (count == 0) {
+      document.getElementById("cardDetails").style.visibility = "visible";
+      count = 1;
+    } else if (count == 1) {
+      document.getElementById("cardDetails").style.visibility = "hidden";
+      count = 0;
+    }
+  }
+
+  function checkPayment(event){
+    event.preventDefault();
+    var name = document.getElementById("cardName").value;
+    localStorage.setItem("cardName", JSON.stringify(name));
+    window.location.href = "successful.html"
+  }
+</script>
