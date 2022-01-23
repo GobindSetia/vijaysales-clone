@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <style>
+        #bigContainer{
+            display:grid;
+            grid-template-rows: repeat(4,450px);
+            border:1px solid purple;
+        }
+        #bigContainer>div{
+            border:1px solid red;
+        }
+        #head-part{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            border:1px solid pink;
+        }
+
+        .container>div:nth-child(2){
+            display:grid;
+            grid-template-columns: repeat(5,1fr);
+        }
+        #mobile{
+            display:flex;
+        }
+
+        /* -----------all properties-------- */
+        .container>div:nth-child(2){
+           display:grid;
+           grid-gap:25px;
+           grid-template-columns:repeat(5,1fr);
+       }
+       .container>div:nth-child(2)>div{
+        /* text-align:center; */
+        border:1px solid red;
+       }
+      
+       .container>div:nth-child(2)>div>h4+p{
+           color:red;
+           text-align: left;
+           margin-left:10px;
+           /* font-size: 1.1em; */
+       }
+       .container>div:nth-child(2)>div>p:nth-child(1){
+           color:red;
+       }
+      
+       .container>div:nth-child(2)>div>div{
+           display:flex;
+           justify-content: space-around;
+           font-size: 1.1em;
+           /* background: red; */
+       }
+    
+       .container>div:nth-child(2)>div>div>p:nth-child(2){
+           color:blue;
+       }
+       .container>div:nth-child(2)>div>div>p:nth-child(1){
+           text-decoration: line-through;
+       }
+       .container>div:nth-child(2)>div>button{
+           /* padding-left:-20px; */
+           /* margin: auto; */
+           width:100%;
+           padding:2px 0px;
+           background:red;
+           color:white;
+           border-radius: 5px;;
+       }
+       #images{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            grid-gap: 40px;
+        }
+        #images img{
+            width:100px;
+            height:60px;
+        }
+        #m{
+            width:90%;
+            margin: auto;
+        }
+        .p1{
+            font-size: 13.8px;
+            font-weight: 600;
+            
+        }
+        .a1{
+            display: grid;
+            font-size: 13px;
+            letter-spacing:0.8px;
+            
+            
+        
+        }
+
+
+       /* --------media Query-------- */
+       /* --------for small screen------ */
+       @media only screen and (min-width:0px) and (max-width:375px){
+           #container{
+               display:flex;
+               flex-wrap: wrap;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div id="bigContainer">
+
+        <!-- -------container1------ -->
+    <div class="container">
+        <div id="head-part">
+            <div><h1>BEST DEALS</h1></div>
+            <div><button>VIEW ALL</button></div>
+        </div>
+        <div id="general"></div>
+    </div>
+
+     <!-- ----------container2------- -->
+     <div class="container">
+        <div id="head-part">
+            <div><h1>LAPTOPS</h1></div>
+            <div><button>VIEW ALL</button></div>
+        </div>
+
+        <div id="laptop"></div>
+     </div>
+    
+   <!-- --------container3-------- -->
+   <div class="container">
+        <div id="head-part">
+            <div><h1>SMART PHONES</h1></div>
+            <div><button>VIEW ALL</button></div>
+        </div>
+
+        <div id="mobile"></div>
+   </div>
+    
+   <!-- --------container4--------- -->
+   <div class="container">
+            <div id="head-part">
+                <div><h1>TELEVISIONS</h1></div>
+                <div><button>VIEW ALL</button></div>
+            </div>
+    
+            <div id="television"></div>
+   </div>
+
+   <!-- ------container5--------
+   <div id="container5">
+    <div id="head-part">
+        <div><h1>BEST DEALS</h1></div>
+        <div><button>VIEW ALL</button></div>
+    </div>
+
+    <div id=""></div>
+</div> -->
+
+    </div>
+    
+    <div id="m">
+        <h2>SHOP BY BRANDS</h2>
+        <div id="images">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/d41fb81a-7c49-4673-9e66-76e9713f3158.png" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/349031f1-75dd-473b-846d-2b024b2c5bb8.jpg" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/9e1b09be-57ea-441d-b833-4b4696ebdbd0.png" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/e146b671-f1f7-472f-8897-5dc996c2658921301003.JPG" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/b7e9d7e8-08ee-40db-8b67-074b9a3a912e21271239.png" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/63a83dce-1cdd-4fd1-b96e-2ab9d1d26c2821191320.jpg" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/1b9c74f1-4de9-4e8b-82b3-c030d118b255.png" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/15021910-89ee-4d58-8234-5ace40d3b84a.png" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/1194d27d-41e5-4363-be35-984032fa674d21191332.jpg" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/88cf20d4-aeb5-4241-99f0-28fc4fc741ed.png" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/6ef50d3a-cbb9-4cab-81c4-a6e10130d010.jpg" alt="">
+            <img src="https://d2xamzlzrdbdbn.cloudfront.net/brands/37964aa3-6bc4-49e9-80c8-d9abfb613d5e.jpg" alt="">
+        </div>
+        <p class="p1">Buy electronics online at Vijay Sales</p>
+        <p class="a1">Vijay Sales is one of the most renowned names in the electronics and consumer durables space. Our omni-channel retail experience gives you the freedom to shop as per your convenience. You can shop at our expansive off-line electronics stores, or online, at our multi-brand website. With our online electronics store you can shop for over 3500+ products from the world’s top brands at the click of a few buttons. Our doorstep delivery feature ensures your shopping reaches you safely and swiftly. Deals, offers and discounts keep prices economical, while our easy EMI feature makes payment effortless.
+            With the My Vijay Sales Loyalty Programme, frequent shoppers can enjoy redeemable points, discounts, and lots more. Our VS+ Extended Warranty service offers many benefits for your device and you. These features, coupled with our prompt customer service makes shopping at Vijay Sales a gratifying experience.</p>
+         <p class="p2 p1">Your go-to electronics store</p>  
+         <p class="a2 a1">At Vijay Sales, you’ll find a range of electronic products and items. At our online electronics shop, you can opt for devices with basic features, as well as ones with avant-garde features, depending on your level of comfort. Our gadgets are genuine, making them great gifts as well. Whether you’re looking for a smart TV to help your parents enjoy their favourite programs better or a multi-tasking Bluetooth speaker for your partner, you’re sure to find exactly what you’re looking for at Vijay Sales. You can shop from the comfort of your home from our online store or you can check for a ‘Vijay Sales electronics shop near me’, to find a store closest to you.</p>
+         <p class="p3 p1">A multi-purpose electronics store</p>
+         <p class="a2 a1">We know that when you’re shopping for electronics online, you like to cross-check and compare products, prices and offers. Our user-friendly website is easy to navigate and check products across multiple categories like -        </p>
+         <p class="p4 p1">Mobiles and tablets   </p>
+         <p class="a2 a1">Most of us cannot live without our smartphones, they help us connect – with our families, the rest of the world, and even ourselves. Visit our electronics shop online to buy a range of mobiles and tablets from top brands like Apple, Samsung, Vivo, Oppo and more. We have basic phones are well as the latest ones with high-end features. When you’re shopping for electronics online, you can also shop for a range of related accessories like earphones, smart watches, portable speakers, cases and covers, cables and lots more.        </p>
+         <p class="p5 p1">Laptops and printers        </p>
+         <p class="a2 a1">We rely on our laptops for so many things, from attending Zoom meetings and making PPTs, to watching our favourite streaming shows. At Vijay Sales, you can shop for your favourite electronics online. Buy laptops and desktops from acclaimed brands like Apple, HP, Dell, Lenovo, Acer, Asus and more. Our range of printers help you meet your printing needs with ease. You can also shop for hard disks, pendrives, routers, keyboards, and a range of other accessories.        </p>
+         <p class="p6 p1">Washing machines        </p>
+         <p class="a2 a1">Having a washing machine to take care of your laundry needs frees up a lot of your time. At our electronics shop online, you can shop for washing machines in a range of sizes. Select by colour, load type, dryer type and lots more. You can opt for fully or semi-automatic washing machines from Samsung, Whirlpool, LG, Godrej, and other top brands.        </p>
+         <p class="p7 p1">TV & entertainment        </p>
+         <p class="a2 a1"> With our fast-paced lives, it’s important that we make time to unwind; to play a game we like or host a party for friends and family. Shop for all your entertainment requirements at Vijay Sales. Get the best speakers, gaming consoles, music players and more at on online electronics store. Sony, Samsung, LG, Panasonic, we have gadgets from all the best brands.        </p>
+         <p class="p8 p1">Cameras        </p>
+         <p class="a2 a1">A timely photograph can help you cherish and relive a special moment for years to come. Whether you’re a beginner at photography, a professional or a hobbyist, we have something for everyone at VijaySales. You can opt for mirrorless cameras, point-and-shoot ones, and lots more. Shop from reputed brands like Nikon, Canon and Sony.        </p>
+         <p class="p9 p1">Home appliances        </p>
+         <p class="a2 a1">Having the right gadgets at home can make your life comfortable and stress-free. Thanks to technology, there is a gadget for almost everything – keeping you cool, washing clothes, re-heating food. Our online shopping store offers the latest launches as well as tried and tested products. Shop for ACs, dishwashers, geysers, water dispensers, air purifiers and lots more.        </p>
+         <p class="p10 p1">Kitchen appliances        </p>
+         <p class="a2 a1">Why make cooking a strenuous task when it can be enjoyable? Get the right gadgets to help you create your culinary masterpieces with ease. Shop for ovens, food processors, rice cookers, atta makers, cooking utensils and lots more.        </p>
+         <p class="p11 p1">Personal care        </p>
+         <p class="a2 a1">Keeping yourself well-groomed helps you feel good about yourself and this has a positive impact on your confidence. Create your personal collection of grooming products by shopping for trimmers, epilators, hair dryers, hair straighteners and more from VijaySales.        </p>
+    </div>
+
+</body>
+</html>
+<script>
+    let mobilesData = JSON.parse(localStorage.getItem("mobilesData"));
+    let laptopsData = JSON.parse(localStorage.getItem("laptopsData"));
+    let televisionsData = JSON.parse(localStorage.getItem("televisionsData"));
+    let generalData = JSON.parse(localStorage.getItem("generalData"));
+    let mobile=document.querySelector("#mobile");
+    let general=document.querySelector("#general");
+    let laptop=document.querySelector("#laptop");
+    let television=document.querySelector("#television");
+    let mainDiv;
+    for(let i=0;i<5;i++){
+        mainDiv=append(mobilesData[i]);
+        mobile.append(mainDiv);
+    }
+    for(let i=0;i<5;i++){
+        mainDiv=append(laptopsData[i]);
+        laptop.append(mainDiv);
+    }
+    for(let i=0;i<5;i++){
+        mainDiv=append(televisionsData[i]);
+        television.append(mainDiv);
+    }
+    for(let i=0;i<5;i++){
+        mainDiv=append(generalData[i]);
+        general.append(mainDiv);
+    }
+    
+    
+   function append(el){
+        let mainDiv=document.createElement("div");
+        let priceOfferDiv=document.createElement("div");
+        let img = document.createElement("img");
+        let h4=document.createElement("h4");
+        let newPrice=document.createElement("p");
+        let oldPrice=document.createElement("p");
+        let offer=document.createElement("p");
+        let btn=document.createElement("button");
+        img.setAttribute("src",el.img);
+        img.height="150";
+        img.width="150";
+        h4.innerHTML=el.feature;
+        newPrice.innerHTML="Rs."+el.newPrice;
+        oldPrice.innerHTML="Rs"+el.oldPrice;
+        offer.innerHTML=el.offer+"off";
+        btn.innerHTML="OFFER AVAILABLE";
+        priceOfferDiv.append(oldPrice,offer);
+        mainDiv.append(img,h4,newPrice,priceOfferDiv,btn);
+        return mainDiv;
+    }
+</script>
