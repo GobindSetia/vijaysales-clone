@@ -1,0 +1,46 @@
+#mainContainer{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2,40%);
+    /* border: 1px solid black;  */
+    background-color: #eeefef;
+    grid-template-areas: 
+    "a b";    
+}
+/* #mainContainer>div{
+    border: 1px solid black;
+} */
+#mainContainer :nth-child(1){
+    grid-area: a;
+}
+#mainContainer :nth-child(2){
+    grid-area: b;
+}
+#vijaySalesDes{
+    padding: 20px;
+}
+#serviceBtn{
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+}
+button{
+    border: none;
+}
+#ssImage{
+    margin-left: 110px;
+    padding: 20px;
+}
+#shippingContainer{
+    background-color: #ffffff;
+    /* margin-top: 40px; */
+    justify-content: center;
+    /* gap: 5px; */
+    display: grid;
+    grid-template-columns: repeat(4,23%);
+    /* border: 1px solid black; */
+}
+#shippingContainer>div{
+    padding: 40px;
+    border: 1px solid grey;
+}
