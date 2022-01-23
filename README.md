@@ -1,1 +1,0 @@
-# vijaysales-clone
