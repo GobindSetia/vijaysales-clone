@@ -13,7 +13,7 @@ let x=` <h2>SIGN UP</h2>
 </div>
 <div id="image">
     <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/checkout/login-via-facebook.png" class="one">
-    <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/checkout/login-via-google.png" class="two one">
+    <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/checkout/login-via-google.png" class="two one", id="google">
 </div>
 </div>
 <div id="newone">
@@ -104,3 +104,32 @@ localStorage.setItem("userDatabase1",JSON.stringify(userData1))
 
 window.location.href="../SIGNIN_PAGE/signin.html"
 }
+
+let n= document.getElementById("google");
+n.addEventListener("click",go);
+
+async function go(){
+    window.location.href="http://localhost:2233/auth/google"
+}
+
+data= JSON.stringify(data)
+
+let response = await fetch(`http://localhost:2233/auth/google/register`,{
+
+    method:"POST",
+
+    body:data,
+
+    headers:{
+        "Content-Type":"application/json"
+    }
+
+
+})
+
+
+
+
+
+
+
