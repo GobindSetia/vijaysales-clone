@@ -112,20 +112,20 @@ async function go(){
     window.location.href="http://localhost:2233/auth/google"
 }
 
-data= JSON.stringify(data)
+// data= JSON.stringify(data)
 
-let response = await fetch(`http://localhost:2233/auth/google/register`,{
+// let response = await fetch(`http://localhost:2233/auth/google/register`,{
 
-    method:"POST",
+//     method:"POST",
 
-    body:data,
+//     body:data,
 
-    headers:{
-        "Content-Type":"application/json"
-    }
+//     headers:{
+//         "Content-Type":"application/json"
+//     }
 
 
-})
+// })
 
 
 
