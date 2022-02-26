@@ -13,15 +13,15 @@ let b=`<h2>LOGIN</h2>
 </div>
 <div id="image">
     <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/checkout/login-via-facebook.png" class="one">
-    <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/checkout/login-via-google.png" class="two one">
+    <img src="https://d2xamzlzrdbdbn.cloudfront.net/imagesrewamp/checkout/login-via-google.png" class="two one" ,id="got">
 </div>
 </div>
 <div id="newone1">
     <p>New to Vijay Sales?</p>
     <p class="color"> <a href="../SIGNUP_PAGE/signup.html">Create Account</a></p>
-</div>
+</div>`
  
-`
+
 conta.innerHTML=b
 
 let email = document.getElementById("email1").value
@@ -76,6 +76,17 @@ else{
     alert("wrong credentials")
 }
 }
+
+let m= document.getElementById("got");
+console.log(m)
+m.addEventListener("click",goo);
+
+
+async function goo(){
+    window.location.href="http://localhost:2233/auth/google"
+}
+
+
 
 
 
