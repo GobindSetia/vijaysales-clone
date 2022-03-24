@@ -8,7 +8,7 @@
 <a href="https://thirsty-feynman-5c455d.netlify.app/ "> click here </a>
 
 <div>
-<h2> ScreenShots </h2>
+<h2> Features </h2>
 
 <div><a href="https://thirsty-feynman-5c455d.netlify.app/" > <h3> Home Page </h3> 
   
