@@ -80,7 +80,7 @@
            justify-content: space-between;
            border:1px solid orange;
        }
-      #filter{
+      #sort{
           width:20px;
       }
 
@@ -164,12 +164,12 @@
         <div>
             <h3>TYPE</h3>
             <div>
-                <input type = "checkbox" id="iPhones" value="iPhones">
-                <label for = "iPhones">iPhones</label><br>
-                <input type="checkbox" id="smartPhones" value="smartPhones">
-                <label for="smartPhones">smartphones</label><br>
-                <input type="checkbox" id="basicPhones" value="basicPhones">
-                <label for="basicPhones">basic phones</label><br>
+                <input type = "checkbox" class="filter" value="apple">
+                <label for = "apple">iPhones</label><br>
+                <input type="checkbox" class="filter" value="sumsung">
+                <label for="sumsung">sumsung</label><br>
+                <input type="checkbox" class="filter" value="realme">
+                <label for="realme">realme</label><br>
             </div>
         </div>
 
@@ -192,12 +192,12 @@
         <div>
             <h3>BRAND</h3>
             <div>
-                <input type = "checkbox" id="apple" value="apple">
+                <input type = "checkbox" class="filter" value="apple">
                 <label for = "apple">Apple</label><br>
-                <input type="checkbox" id="onePlus" value="onePlus">
+                <input type="checkbox" class="filter" value="oneplus">
                 <label for="onePlus">One Plus</label><br>
-                <input type="checkbox" id="basicPhones" value="basicPhones">
-                <label for="basicPhones">basic phones</label><br>
+                <input type="checkbox" class="filter" value="redmi">
+                <label for="basicPhones">redmi</label><br>
             </div>
         </div>
         <div></div>
@@ -227,7 +227,7 @@
         <div id="sort-div">
             <div id="sort-by"><p>sort by</p></div>
             <div id="sort-menu">
-                <select name="sort" id="filter">
+                <select name="sort" id="sort">
                     <option value="">select any option</option>
                     <option value="new">New</option>
                     <option value="popular">Popular</option>
@@ -390,7 +390,7 @@
         // ---------mobilesData------
        let mobilesData2 = [
             {
-                category: "mobile",
+                category: "apple",
                 feature: "Apple iPhone 12 (128 GB, Blue)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/f0e87916-ef3d-49ba-a336-786ea2c5b06b_182x182.jpg",
                 newPrice: "62,605",
@@ -399,7 +399,7 @@
             },
 
             {
-                category: "mobile",
+                category: "apple",
                 feature: "Apple iPhone 12 (128 GB, Black)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/7b3d514b-a469-469b-8c0e-4bf5140438cb_182x182.jpg",
                 newPrice: "67,355",
@@ -408,7 +408,7 @@
             },
 
             {
-                category: "mobile",
+                category: "oneplus",
                 feature: "OnePlus Nord 2 5G (8 GB RAM, 128 GB Storage,",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/6d9fa7c0-c6ab-47d1-b6f0-16f7832a7556_182x182.jpg",
                 newPrice: "29,999",
@@ -417,7 +417,7 @@
             },
 
             {
-                category: "mobile",
+                category: "oneplus",
                 feature: "OnePlus 9 Pro 5G (8 GB RAM, 128 GB Storage,",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/63796658-96e1-48c4-8b7e-4aa910e81c13_182x182.jpg",
                 newPrice: "59,999",
@@ -426,7 +426,7 @@
             },
 
             {
-                category: "mobile",
+                category: "oneplus",
                 feature: "OnePlus 9 Pro 5G (8 GB RAM, 128 GB Storage, Pine Green)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/aade5485-9d17-44b1-bc12-c1cf1ce4ff85_182x182.jpg",
                 newPrice: "59,999",
@@ -435,7 +435,7 @@
             },
 
             {
-                category: "mobile",
+                category: "oneplus",
                 feature: "OnePlus 9 5G (8 GB RAM, 128 GB Storage, Arctic",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/bdf16d36-53df-4151-9aa1-0f46112a760c_182x182.jpg",
                 newPrice: "44,999",
@@ -444,7 +444,7 @@
             },
 
             {
-                category: "mobile",
+                category: "oneplus",
                 feature: "OnePlus 9R 5G (12 GB RAM, 256 GB Storage,",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/cc37c6f9-5095-4818-af27-6295ddd4c532_182x182.jpg",
                 newPrice: "40,999",
@@ -453,7 +453,7 @@
             },
 
             {
-                category: "mobile",
+                category: "oppo",
                 feature: "Oppo CPH2185 A15 (3 GB, 32 GB, Dynamic Black)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/a5eac8a8-01e3-4294-ac61-489c469d2fbf_182x182.jpg",
                 newPrice: "10,990",
@@ -462,7 +462,7 @@
             },
 
             {
-                category: "mobile",
+                category: "redmi",
                 feature: "Redmi Note 10S (6 GB RAM, 64 GB Storage, Deep",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/df5630de-bddb-4538-93b0-a2894e5e2b94_182x182.jpg",
                 newPrice: "13,999",
@@ -471,7 +471,7 @@
             },
 
             {
-                category: "mobile",
+                category: "redmi",
                 feature: "Redmi Note 10S (6 GB RAM, 64 GB Storage)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/67d54c6b-5771-4694-b7bb-3d9cdfd85ca9_182x182.jpg",
                 newPrice: "13,999",
@@ -480,7 +480,7 @@
             },
 
             {
-                category: "mobile",
+                category: "sumsung",
                 feature: "Samsung Galaxy A03s (4 GB RAM, 64 GB ROM, Blue)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/bb492ed2-6bbc-44a8-9392-16d1fbfa202f_182x182.jpg",
                 newPrice: "12,499",
@@ -489,7 +489,7 @@
             },
 
             {
-                category: "mobile",
+                category: "vivo",
                 feature: "Vivo Y12G (3 GB RAM, 64 GB ROM, Phantom Black)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/d3c3e7bf-3acd-4d4a-aef7-156c2ab7ab9d21140626_182x182.jpg",
                 newPrice: "11,999",
@@ -498,7 +498,7 @@
             },
 
             {
-                category: "mobile",
+                category: "redmi",
                 feature: "Redmi 10 Prime (6 GB RAM, 128 GB ROM",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/d03ad00a-1328-4335-8de4-06c9e133f17a21091150_182x182.jpg",
                 newPrice: "14,499",
@@ -507,7 +507,7 @@
             },
 
             {
-                category: "mobile",
+                category: "sumsung",
                 feature: "Samsung Galaxy A12 (4 GB RAM, 64 GB ROM, Blue)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/71c5d230-c6c2-4762-8cba-c157432144be21131237_182x182.jpg",
                 newPrice: "13,999",
@@ -516,7 +516,7 @@
             },
 
             {
-                category: "mobile",
+                category: "redmi",
                 feature: "Redmi Note 10T 5G (4 GB RAM, 64 GB ROM, Graphit",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/2e5831cb-c02b-48e6-99d1-79edbaac4d20_182x182.jpg",
                 newPrice: "13,999",
@@ -525,7 +525,7 @@
             },
 
             {
-                category: "mobile",
+                category: "realme",
                 feature: "Realme C25Y (4GB RAM, 128 GB ROM, Metal Grey)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/a9e71f71-a1d6-47d2-95af-efc7d175e7c321200526_182x182.jpg",
                 newPrice: "11,999",
@@ -534,7 +534,7 @@
             },
 
             {
-                category: "mobile",
+                category: "vivo",
                 feature: "Vivo Y21 (4 GB RAM, 64 GB ROM, Diamond Glow)",
                 img: "https://d2xamzlzrdbdbn.cloudfront.net/products/6d2e5b51-b2c0-46de-a2b1-beb3b6d7342c21081257_182x182.jpg",
                 newPrice: "13,990",
@@ -632,11 +632,11 @@ localStorage.setItem("generalData",JSON.stringify(generalData2));
 displayData(mobilesData);
 
     // ---------sort function-----
-    document.querySelector("#filter").addEventListener("change",mySort)
+    document.querySelector("#sort").addEventListener("change",mySort)
     let sortedData=[...mobilesData];
     function mySort(){
-        let filter=document.querySelector("#filter").value;
-    if(filter=="low"){
+        let sortValue=document.querySelector("#sort").value;
+    if(sortValue=="low"){
         sortedData.sort(function(a,b){
         if(a.newPrice>b.newPrice){
             return 1;
@@ -647,7 +647,7 @@ displayData(mobilesData);
         return 0;
     })
     
-    }else if(filter=="high"){
+    }else if(sortValue=="high"){
         sortedData.sort(function(a,b){
         if(a.newPrice>b.newPrice){
             return -1;
@@ -661,6 +661,28 @@ displayData(mobilesData);
     console.log("sortedData",sortedData);
     displayData(sortedData);
     }
+
+// here i am implementing filter functionality
+// and after that showing updated data on ui
+const myFilter=document.getElementsByClassName("filter");
+console.log("my Filter",myFilter[0].input.value);
+myFilter.map((element)=>{
+    element.addEventListener("change",filterData);
+    function filterData(){
+    let filterValue=element.value;
+    let filteredData=mobilesData.filter((e)=>e.category==filterValue)
+console.log("filteredData",filteredData)
+displayData(filteredData)
+}
+})
+
+
+
+
+
+
+
+
 
     import header from "./components/header.js"
 
