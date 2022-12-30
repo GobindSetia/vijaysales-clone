@@ -15,8 +15,9 @@
     <style>
         /* -----main Div----- */
         #main{
+            border:1px solid red;
             display:flex;
-            width:95%;
+            width:100%;
             margin:auto;
              }
 
@@ -52,7 +53,7 @@
        #upper-container{
            display:flex;
            height:100px;
-           width:1200px;
+           /* width:1200px; */
            justify-content: space-between;
            align-items: center;
            align-content:center;
@@ -87,7 +88,7 @@
        #container{
            display:grid;
            grid-gap:25px;
-           grid-template-columns:repeat(5,1fr);
+           grid-template-columns:repeat(4,1fr);
        }
       
        #container>div>h4+p{
@@ -121,6 +122,9 @@
            background:red;
            color:white;
            border-radius: 5px;;
+       }
+       #rightDiv{
+        border:1px solid green;
        }
 
        /* --------media Query-------- */
@@ -209,6 +213,7 @@
 
         <!-- -----------upper container---------- -->
     <div id="upper-container">
+
         <div id="upper-head-div">
             <div id="mobile-div">
                 <h1>Buy Mobiles & Tablets Online</h1>
@@ -222,8 +227,8 @@
         <div id="sort-div">
             <div id="sort-by"><p>sort by</p></div>
             <div id="sort-menu">
-                <select name="" id="filter" onchange="mySort()">
-                    <option value=""></option>
+                <select name="sort" id="filter">
+                    <option value="">select any option</option>
                     <option value="new">New</option>
                     <option value="popular">Popular</option>
                     <option value="relevance">Relevance</option>
@@ -237,6 +242,8 @@
 
     <!-- ---------lower container Div---------- -->
    <div id="container"></div>
+
+   </div>
 
    </div>
    
@@ -592,6 +599,9 @@ localStorage.setItem("generalData",JSON.stringify(generalData2));
     // -------------html part------
     let mobilesData = JSON.parse(localStorage.getItem("mobilesData"));
     let container = document.querySelector("#container");
+    function displayData(mobilesData){
+        container.innerHTML="";
+        console.log("accessed")
     mobilesData.forEach(function(el){
         let coupon = document.createElement("p");
         let mainDiv=document.createElement("div");
@@ -615,34 +625,41 @@ localStorage.setItem("generalData",JSON.stringify(generalData2));
         mainDiv.append(coupon,img,h4,newPrice,priceOfferDiv,btn);
         container.append(mainDiv);
     })
+}
+
+
+// we need to invoke the displayData function whenever our page is loaded
+displayData(mobilesData);
 
     // ---------sort function-----
-    let sortedArr;
+    document.querySelector("#filter").addEventListener("change",mySort)
+    let sortedData=[...mobilesData];
     function mySort(){
         let filter=document.querySelector("#filter").value;
-    if(filter="low"){
-        sortedArr=mobilesData.sort(function(a,b){
-        if(a>b){
+    if(filter=="low"){
+        sortedData.sort(function(a,b){
+        if(a.newPrice>b.newPrice){
             return 1;
         }
-        if(a<b){
+        if(a.newPrice<b.newPrice){
             return -1;
         }
         return 0;
     })
     
     }else if(filter=="high"){
-        sortedArr=mobilesData.sort(function(a,b){
-        if(a>b){
+        sortedData.sort(function(a,b){
+        if(a.newPrice>b.newPrice){
             return -1;
         }
-        if(a<b){
+        if(a.newPrice<b.newPrice){
             return 1;
         }
         return 0;
     })
     }
-    
+    console.log("sortedData",sortedData);
+    displayData(sortedData);
     }
 
     import header from "./components/header.js"
