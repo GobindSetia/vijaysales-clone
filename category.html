@@ -600,6 +600,7 @@ localStorage.setItem("generalData",JSON.stringify(generalData2));
     let mobilesData = JSON.parse(localStorage.getItem("mobilesData"));
     let container = document.querySelector("#container");
     function displayData(mobilesData){
+        console.log("updated Data",mobilesData)
         container.innerHTML="";
         console.log("accessed")
     mobilesData.forEach(function(el){
