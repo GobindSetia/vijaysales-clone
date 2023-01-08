@@ -77,11 +77,12 @@
            width:100px;
            height:30px;
            align-items: center;
-           justify-content: space-between;
-           border:1px solid orange;
+          gap:5px;
+           font-size: larger;
+           font-size: bold;
        }
       #sort{
-          width:20px;
+          width: 25px;
       }
 
       /* -------lower Container------- */
@@ -123,9 +124,7 @@
            color:white;
            border-radius: 5px;;
        }
-       #rightDiv{
-        border:1px solid green;
-       }
+      
 
        /* --------media Query-------- */
        /* --------for small screen------ */
@@ -229,9 +228,6 @@
             <div id="sort-menu">
                 <select name="sort" id="sort">
                     <option value="">select any option</option>
-                    <option value="new">New</option>
-                    <option value="popular">Popular</option>
-                    <option value="relevance">Relevance</option>
                     <option value="low">Price:Low to High</option>
                     <option value="high">Price:High To Low</option>
                 </select>
@@ -621,6 +617,9 @@ localStorage.setItem("generalData",JSON.stringify(generalData2));
         oldPrice.innerHTML="Rs"+el.oldPrice;
         offer.innerHTML=el.offer+"off";
         btn.innerHTML="OFFER AVAILABLE";
+        btn.addEventListener("click",()=>{
+            window.location.href="uniqueProduct.html"
+        })
         priceOfferDiv.append(oldPrice,offer);
         mainDiv.append(coupon,img,h4,newPrice,priceOfferDiv,btn);
         container.append(mainDiv);
